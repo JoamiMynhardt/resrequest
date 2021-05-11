@@ -1,0 +1,135 @@
+<div class="row">
+
+  <!-- page statistic card start -->
+   <div class="col-xl-3 col-md-6">
+    <app-card [hidHeader]="true">
+      <div class="row align-items-center m-l-0">
+        <div class="col-auto">
+          <i class="icon feather icon-calendar f-30 text-c-purple"></i>
+        </div>
+        <div class="col-auto">
+          <h6 class="text-muted m-b-10">Total Bookings</h6>
+          <h2 class="m-b-0">2,164</h2>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-xl-3 col-md-6">
+    <app-card [hidHeader]="true">
+      <div class="row align-items-center m-l-0">
+        <div class="col-auto">
+          <i class="icon feather icon-home f-30 text-c-green"></i>
+        </div>
+        <div class="col-auto">
+          <h6 class="text-muted m-b-10">Rooms Available</h6>
+          <h2 class="m-b-0">351</h2>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-xl-3 col-md-6">
+    <app-card [hidHeader]="true">
+      <div class="row align-items-center m-l-0">
+        <div class="col-auto">
+          <i class="icon feather icon-users f-30 text-c-red"></i>
+        </div>
+        <div class="col-auto">
+          <h6 class="text-muted m-b-10">New Customers</h6>
+          <h2 class="m-b-0">2,654</h2>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-xl-3 col-md-6">
+    <app-card [hidHeader]="true">
+      <div class="row align-items-center m-l-0">
+        <div class="col-auto">
+          <i class="icon feather icon-credit-card f-30 text-c-blue"></i>
+        </div>
+        <div class="col-auto">
+          <h6 class="text-muted m-b-10">Total Revenue</h6>
+          <h2 class="m-b-0">R25,694</h2>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  <!-- page statistic card end -->
+
+  <!-- real-time data of visits start and booking cart-->
+  <div class="col-xl-7 col-md-12">
+    <app-card cardTitle="Real-time Data of Visitors" [options]="false">
+      <app-apex-chart chartID="chart-apex-site-visitor" [chartConfig]="this.siteVisitorCAC" [newData]="this.data"></app-apex-chart>
+    </app-card>
+  </div>
+  <div class="col-xl-5 col-md-12">
+    <app-card cardTitle="Room Booking Chart" [options]="false">
+      <app-apex-chart chartID="traffic-chart-1" [chartConfig]="this.trafficChartData"></app-apex-chart>
+    </app-card>
+  </div>
+
+  <!-- real-time data of visits end start and booking cart -->
+
+  <!-- Bookings section-->
+  <div class="col-md-12">
+    <app-card cardTitle="Booking Details" cardClass="table-card latest-activity-card" [options]="false">
+      <div class="table-responsive">
+        <table class="table table-hover table-borderless">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Check In</th>
+            <th>Check Out</th>
+            <th>Phone</th>
+            <th>Room Type</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>John Deo</td>
+            <td>12-05-2021</td>
+            <td>19-05-2021</td>
+            <td>(123)123456</td>
+            <td>Single</td>
+            <td><label class="badge badge-light-warning">Pending</label></td>
+            <td><a href="javascript:"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 f-w-600 f-16 text-c-red"></i></a></td>
+          </tr>
+          <tr>
+            <td>Anthony Davie</td>
+            <td>15-05-2021</td>
+            <td>19-05-2021</td>
+            <td>1(123)123456</td>
+            <td>Single</td>
+            <td><label class="badge badge-light-primary">Paid</label></td>
+            <td><a href="javascript:"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 f-w-600 f-16 text-c-red"></i></a></td>
+          </tr>
+          <tr>
+            <td>Lori Moore</td>
+            <td>21-05-2021</td>
+            <td>26-05-2021</td>
+            <td>(123)123456</td>
+            <td>Double</td>
+            <td><label class="badge badge-light-success">Success</label></td>
+            <td><a href="javascript:"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 f-w-600 f-16 text-c-red"></i></a></td>
+          </tr>
+          <tr>
+            <td>Austin Pena</td>
+            <td>14-05-21</td>
+            <td>25-05-2021</td>
+            <td>(123)123456</td>
+            <td>King</td>
+            <td><label class="badge badge-light-danger">Failed</label></td>
+            <td><a href="javascript:"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 f-w-600 f-16 text-c-red"></i></a></td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="text-right  m-r-20">
+        <a href="javascript:" class="b-b-primary text-primary">View all Booking Details</a>
+      </div>
+    </app-card>
+  </div>
+  <!-- Bookings section end-->
+</div>
